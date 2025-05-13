@@ -1,0 +1,277 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make the main container fullscreen */
+main {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px; /* Optional, limits width if needed */
+    max-height: 1000px; /* Optional, limits height if needed */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fullscreen Game Screen */
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+canvas {
+    border: 2px solid #007bff;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:disabled {
+    background-color: #ccc;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p.error {
+    color: red;
+}
+
+/* Game Menu Styles */
+button {
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    background-color: #28a745;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Success and Error Messages */
+.message {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Clan Menu Styles */
+.clan-menu {
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.clan-menu h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.clan-menu input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.clan-menu input:focus {
+    border-color: #007bff;
+}
+
+.clan-menu button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.clan-menu button:hover {
+    background-color: #0056b3;
+}
+
+.clan-menu button:disabled {
+    background-color: #ccc;
+}
+
+.clan-menu .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.clan-menu .message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.clan-menu .return-button {
+    margin-top: 20px;
+    background-color: #28a745;
+    padding: 12px;
+}
+
+.clan-menu .return-button:hover {
+    background-color: #218838;
+}
+
+.clan-menu .logout-button {
+    margin-top: 10px;
+    background-color: #dc3545;
+    padding: 12px;
+}
+
+.clan-menu .logout-button:hover {
+    background-color: #c82333;
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+    .clan-menu {
+        padding: 15px;
+    }
+
+    .clan-menu h2 {
+        font-size: 20px;
+    }
+
+    .clan-menu input,
+    .clan-menu button {
+        font-size: 14px;
+    }
+}
